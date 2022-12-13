@@ -23,6 +23,19 @@ Consists of two parts, Pothole detection and Official YOLOv7
 
 # Dataset
 
+### The dataset is too large, it would be better to download from web
+
+Try this command on your terminal
+
+>```python
+> wget https://learnopencv.s3.us-west-2.amazonaws.com/pothole_dataset.zip
+>```
+
+And then you can use it after extract the file
+
+The dataset consists of 1265 training images, 401 validation images and 118 test images
+
+
 # Code
 
 ## Training
@@ -65,6 +78,11 @@ python3 detect.py --source ../../video.mp4 --weights runs/train/YOLOv7_tiny_poth
 ```python
 python3 detect.py --source ../../video.mp4 --weights runs/train/YOLOv7_tiny_pothole_multi_res/weights/best.pt --name YOLOv7_Inference_multi_res
 ```
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 # Official YOLOv7
 

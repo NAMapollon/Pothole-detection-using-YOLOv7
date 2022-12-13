@@ -1,3 +1,71 @@
+# SW Capstone Design
+
+### Pothole Detection using YOLOv7
+#### 2017103719 남승하
+
+> Implementation of Pothole detection on the road using YOLOv7
+> 
+> Thanks for this works to authors 🙏 
+
+Consists of two parts, Pothole detection and Official YOLOv7
+
+# Pothole Detection
+
+![image](https://user-images.githubusercontent.com/77718867/207284629-a69b8a1b-9b72-4658-8481-6b0f5cc65101.png)
+
+> What is Pothole?
+>
+> [If you want to know, see this](https://ko.wikipedia.org/wiki/%ED%8C%9F%ED%99%80)
+>
+> Prior Pothole detection reference
+> 
+> [In LearnOpenCV(Thanks, too)](https://learnopencv.com/pothole-detection-using-yolov4-and-darknet/)
+
+# Dataset
+
+# Code
+
+## Training
+
+[`yolov7.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) [`yolov7x.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt) [`yolov7-w6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-w6.pt) [`yolov7-e6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6.pt) [`yolov7-d6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-d6.pt) [`yolov7-e6e.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e.pt)
+
+#### For fixed resolution
+```python
+python3 train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data data/pothole.yaml --img 640 640 --cfg cfg/training/yolov7_pothole-tiny.yaml --weights 'yolov7-tiny.pt' --name YOLOv7_tiny_pothole_fixed_res --hyp data/hyp.scratch.custom.yaml
+```
+
+#### For multi-scale resolution
+```python
+python3 train.py --epochs 100 --workers 4 --device 0 --batch-size 32 --data data/pothole.yaml --img 640 640 --cfg cfg/training/yolov7_pothole-tiny.yaml -- weights 'yolov7-tiny.pt' --name YOLOv7_tiny_pothole_multi_res --hyp data/hyp.scratch.custom.yaml --multi-scale
+```
+
+## Test
+
+#### For fixed resolution
+```python
+python3 test.py --weights runs/train/YOLOv7_tiny_pothole_fixed_res/weights/best.pt --task test --data data/pothole.yaml
+```
+
+#### For multi-scale resolution
+```python
+python3 test.py --weights runs/train/YOLOv7_tiny_pothole_multi_res/weights/best.pt --task test --data data/pothole.yaml
+```
+
+
+# Example of Inference
+
+![image](https://user-images.githubusercontent.com/77718867/207286580-f51b43ec-8e34-4d0f-aec4-188692075919.png)
+
+#### Fixed resolution weight
+```python
+python3 detect.py --source ../../video.mp4 --weights runs/train/YOLOv7_tiny_pothole_fixed_res/weights/best.pt --name YOLOv7_Inference_fixed_res
+```
+
+#### Multi-scale resolution weight
+```python
+python3 detect.py --source ../../video.mp4 --weights runs/train/YOLOv7_tiny_pothole_multi_res/weights/best.pt --name YOLOv7_Inference_multi_res
+```
+
 # Official YOLOv7
 
 Implementation of paper - [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)

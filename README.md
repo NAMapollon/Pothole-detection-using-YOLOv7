@@ -35,10 +35,19 @@ And then you can use it after extract the file
 
 The dataset consists of 1265 training images, 401 validation images and 118 test images
 
-
 # Code
 
 ## Training
+
+> You can control IOU and Conf-thresh by adding ```--iou-thres``` or ```conf-thres```, both default values are ```0.25```
+> 
+> ```device``` is optional, You can use cpu to train if you do not have GPU
+>
+> ```batch-size```, ```epochs``` and ```img-size```,...other hyper-parameters are optional
+>
+> I set my code depending on my environment like GPU memory and etc...
+
+
 
 [`yolov7.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7.pt) [`yolov7x.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7x.pt) [`yolov7-w6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-w6.pt) [`yolov7-e6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6.pt) [`yolov7-d6.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-d6.pt) [`yolov7-e6e.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-e6e.pt)
 
@@ -64,10 +73,19 @@ python3 test.py --weights runs/train/YOLOv7_tiny_pothole_fixed_res/weights/best.
 python3 test.py --weights runs/train/YOLOv7_tiny_pothole_multi_res/weights/best.pt --task test --data data/pothole.yaml
 ```
 
+# Result
+
+![Results](https://user-images.githubusercontent.com/77718867/207304671-259800b6-66a2-43eb-9be6-ff39cd38a3b4.png)
+
+> In this training, I use [`yolov7_training.pt`](https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7_training.pt) weights
+>
+> and ```epochs = 100```, ```batch-size = 8``` and train it with ```fixed-resolution```
+> 
+> Notice: It is just a fragment of my training results 😦
 
 # Example of Inference
 
-![image](https://user-images.githubusercontent.com/77718867/207286580-f51b43ec-8e34-4d0f-aec4-188692075919.png)
+<img width="1194" alt="스크린샷 2022-12-13 오후 8 09 01" src="https://user-images.githubusercontent.com/77718867/207302362-1e382e65-eda5-4362-9a14-85a1d4990b96.png">
 
 #### Fixed resolution weight
 ```python

@@ -37,6 +37,14 @@ The dataset consists of 1265 training images, 401 validation images and 118 test
 
 # Code
 
+> All of the codes were implemented under directory 'yolov7'
+>
+> ```pyhon3
+>
+> cd yolov7/python3 train(test, detect, train_aux).py...
+>
+>```
+
 ## Training
 
 > You can control IOU and Conf-thresh by adding ```--iou-thres``` or ```conf-thres```, both default values are ```0.25```

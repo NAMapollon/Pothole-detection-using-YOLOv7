@@ -1,6 +1,6 @@
 # SW Capstone Design
 
-### Pothole Detection using YOLOv7(Based on YOLOR)
+### Pothole Detection using YOLOv7(Based on [YOLOR](https://github.com/WongKinYiu/yolor))
 #### 2017103719 남승하
 
 > Implementation of Pothole detection on the road using YOLOv7

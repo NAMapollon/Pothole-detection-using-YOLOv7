@@ -47,7 +47,7 @@ Or if you want more kinds of dataset, you can visit [here](https://public.robofl
 >
 >```
 
-## Training
+## Train
 
 > You can control IoU and Conf-thresh by adding ```--iou-thres``` or ```conf-thres```, each default values are ```0.45``` and ```0.25```
 > 

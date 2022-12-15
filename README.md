@@ -35,6 +35,8 @@ And then you can use it after extract the file
 
 The dataset consists of 1265 training images, 401 validation images and 118 test images
 
+Or if you want more kinds of dataset, you can visit [here](https://public.roboflow.com/object-detection/pothole/1)
+
 # Code
 
 > All of the codes were implemented under directory 'yolov7'
@@ -47,7 +49,7 @@ The dataset consists of 1265 training images, 401 validation images and 118 test
 
 ## Training
 
-> You can control IOU and Conf-thresh by adding ```--iou-thres``` or ```conf-thres```, both default values are ```0.25```
+> You can control IoU and Conf-thresh by adding ```--iou-thres``` or ```conf-thres```, each default values are ```0.45``` and ```0.25```
 > 
 > ```device``` is optional, You can use cpu to train if you do not have GPU
 >

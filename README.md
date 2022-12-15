@@ -95,7 +95,14 @@ python3 test.py --weights runs/train/YOLOv7_tiny_pothole_multi_res/weights/best.
 
 # Example of Inference
 
+Daytime
+
 <img width="1194" alt="스크린샷 2022-12-13 오후 8 09 01" src="https://user-images.githubusercontent.com/77718867/207302362-1e382e65-eda5-4362-9a14-85a1d4990b96.png">
+
+Night
+
+<img width="914" alt="스크린샷 2022-12-15 오후 4 39 39" src="https://user-images.githubusercontent.com/77718867/207801169-44accf46-f7fa-4966-a27d-c13144ec22bf.png">
+
 
 #### Fixed resolution weight
 ```python

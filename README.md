@@ -1,3 +1,5 @@
+![GitHub release (latest by date)](https://img.shields.io/github/downloads/NAMapollon/Pothole-detection-using-YOLOv7/latest/total)
+
 # SW Capstone Design
 
 ### Pothole Detection using YOLOv7(Based on [YOLOR](https://github.com/WongKinYiu/yolor))

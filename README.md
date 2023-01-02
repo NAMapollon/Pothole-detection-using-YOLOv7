@@ -1,4 +1,5 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/downloads/NAMapollon/Pothole-detection-using-YOLOv7/latest/total)
+![GitHub repo size](https://img.shields.io/github/repo-size/NAMapollon/Pothole-detection-using-YOLOv7)
 
 # SW Capstone Design
 

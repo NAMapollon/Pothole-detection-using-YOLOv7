@@ -44,7 +44,7 @@ Or if you want more kinds of dataset, you can visit [here](https://public.robofl
 
 > All of the codes were implemented under directory 'yolov7'
 >
-> ```pyhon3
+> ```python
 >
 > cd yolov7/python3 train(test, detect, train_aux).py...
 >
